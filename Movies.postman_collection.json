@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "c8bf3aa6-ad30-492e-9666-c4dd7bdca51e",
+		"name": "Movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20368024"
+	},
+	"item": [
+		{
+			"name": "top-rated-movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/top-rated-movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"top-rated-movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "longest-duration-movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/longest-duration-movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"longest-duration-movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie_csv_upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_csv",
+							"type": "file",
+							"src": "/C:/Users/vibpr/Downloads/Backend Coding Task/Backend Coding Task/data/movies.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/upload/csv/movie",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload",
+						"csv",
+						"movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rating_csv_upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "rating_csv",
+							"type": "file",
+							"src": "/C:/Users/vibpr/Downloads/Backend Coding Task/Backend Coding Task/data/ratings.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/upload/csv/rating",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload",
+						"csv",
+						"rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-new-movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tconst",
+							"value": "ttt00102",
+							"type": "text"
+						},
+						{
+							"key": "titleType",
+							"value": "movie",
+							"type": "text"
+						},
+						{
+							"key": "primaryTitle",
+							"value": "AVATAR : The way of water",
+							"type": "text"
+						},
+						{
+							"key": "runtimeMinutes",
+							"value": "185",
+							"type": "text"
+						},
+						{
+							"key": "genres",
+							"value": "Sci-fi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/new-movie",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"new-movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-new-rating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tconst",
+							"value": "ttt0100",
+							"type": "text"
+						},
+						{
+							"key": "averageRating",
+							"value": "8.8",
+							"type": "text"
+						},
+						{
+							"key": "numVotes",
+							"value": "2700",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/new-rating",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"new-rating"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
